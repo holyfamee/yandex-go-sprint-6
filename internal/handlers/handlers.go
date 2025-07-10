@@ -27,7 +27,7 @@ func ReturnConverted(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	file, handler, err := r.FormFile("file")
+	file, handler, err := r.FormFile("myFile")
 	if err != nil {
 		http.Error(w, "Не удалось получить файл", http.StatusInternalServerError)
 		return
