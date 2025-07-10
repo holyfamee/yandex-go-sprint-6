@@ -7,8 +7,8 @@ import (
 func Convert(s string) string {
 	for _, r := range s {
 		if r != '.' && r != '-' && r != ' ' {
-			return morse.ToText(s)
+			return morse.ToMorse(s)
 		}
 	}
-	return morse.ToMorse(s)
+	return morse.ToText(s)
 }
